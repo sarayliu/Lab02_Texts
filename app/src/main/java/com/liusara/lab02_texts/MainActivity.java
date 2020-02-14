@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         messageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Resources res = getResources();
+                Resources res = getResources(); //instantiate inside onCreate, not outside of it
                 String[] planets = res.getStringArray(R.array.planets_array);
                 String planet = planets[count%planets.length];
                 count++;
